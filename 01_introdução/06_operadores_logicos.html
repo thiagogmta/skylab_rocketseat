@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Operadores Lógicos</h2>
+
+        <script>
+            
+            //Operadores Lógicos
+            // And - &&
+            // Or - ||
+            // Not - !
+
+            /*
+                AND - &&
+
+                Você foi contratado para fazer um site para uma empresa de consórcio.
+                No teste inicial, você deve perguntar para o usuário a idade dele e o seu salário.
+                A pessoa só pode comprar um automóvel se for de maior e ganhar mais de R$ 2.000,00
+            */
+
+            function consorcio(idade, salario){
+                if (idade >=18 && salario >= 2000){
+                    return 'Você pode participar';
+                }else{
+                    return 'Você não pode participar';
+                }
+            }
+
+            var retorno = consorcio(17,2500);
+            document.write(retorno);
+
+            /*
+                OR - ||
+
+                Você foi contratado pelo governo para criar um script para definir as filas prioritárias.
+                Seu site deve exibir um menu de opções, perguntando se a pessoa é Gestante, Idosa, Deficiente ou Nenhuma das alternativas.
+                Se ela for Deficiente, Idosa ou Gestante, tem direito a fila prioritária. Se não, não.
+                1 - Deficiente
+                2 - Idoso
+                3 - Gestante
+                4 - Outros
+            */
+            function prioridade(pri){
+                if ((pri == 1) || (pri == 2) || (pri == 3)){
+                    return 'Preferencial';
+                } else {
+                    return 'Fila comum';
+                }
+            }
+
+            var fila = prioridade(1);
+            document.write(fila);
+
+            /*
+                NOT - !
+                Crie um menu em JavaScript com diversas opções para o usuário, e caso ele digite 0, o sistema seja encerrado
+                1 - cadastrar
+                2 - buscar
+                0 - Sair
+            */
+
+            function negacao(op){
+                if (!op){
+                    return 'Saindo do sistema';
+                } else {
+                    return 'Opcao escolhida' + op;
+                }
+            }
+
+            var sair = negacao(100);
+            document.write(sair);
+        </script>
+    </body>
+</html>

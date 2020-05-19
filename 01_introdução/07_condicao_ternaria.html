@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Condição Ternária</h2>
+
+        <script>
+            
+            /*
+                Condição Ternaria.
+                Pode ser utilizada quando tempos uma estrutura condicional de apenas duas verificações if e else.
+
+            */
+
+            /*
+            A função a seguir faz uma verificação simples de if e else e pode ser substituída pela função logo a baixo
+            caso o usuário digite 1 a resposta é sim. Para qualquer outro número a resposta é não.
+
+
+            function verifica (num){
+                if (num == 1){
+                    return 'A resposta é sim';
+                } else {
+                    return 'A resposta é não';
+                }
+            }
+            */
+
+            function verifica(num){
+                return (num == '1') ? 'A resposta é sim' : 'A resposta é não';
+            }
+
+            var sexo = verifica(2);
+            document.write(sexo);
+            
+        </script>
+    </body>
+</html>

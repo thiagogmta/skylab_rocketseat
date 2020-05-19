@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Exercício 1 - Função e objeto</h2>
+
+        <script>
+            
+            /*
+                1º exercício
+                    Crie uma função que dado o objeto a seguir:
+                    var endereco = {
+                    rua: "Rua dos pinheiros",
+                    numero: 1293,
+                    bairro: "Centro",
+                    cidade: "São Paulo",
+                    uf: "SP"
+                    };
+
+                Retorne o seguinte conteúdo:
+                O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com nº 1293
+            */
+            
+            var registros = {
+                rua: "Rua dos Pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP",
+                imprime: function(){
+                    document.write('O usuario mora em ' + this.rua + ' / ' + this.uf + ', no bairro '+ this.bairro+', na rua "'+this.rua + '" com n°' + this.numero);
+                }
+            };
+        
+            registros.imprime();
+
+        </script>
+    </body>
+</html>

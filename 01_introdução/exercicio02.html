@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Exercício 2 - Numeros pares</h2>
+
+        <script>
+            
+            /*
+                Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+                function pares(x, y) {
+                // código aqui
+                }
+                pares(32, 321);
+            */
+            
+            function pares(x, y){
+                for(i=x;i<y;i++){
+                    a = i%2
+                    if(!a){
+                        
+                        document.write(i);
+                        document.write("<br>");
+                    }
+
+                }
+            }
+
+            pares(1, 10);
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Estrutura de Repetição</h2>
+
+        <script>
+            
+            /*
+                Laço de repetição:
+
+                Um laço de repetição pode repetir uma rotina por tempo determinado. Nesse caso temos:
+
+                - Laço FOR
+                    - O FOR é indicado para quando temos consciência de quantos saltos nosso algorítmo irá realizar.
+                - Laço WHILE
+                    - O laço WHILE é indicado para quando não tempos certeza de quantos saltos devem ser realizados. O WHILE significa "enquanto".
+                    Enquanto determinada condição não for satisfeita o laço irá continuar em looping.
+            */
+
+            // Essa função irá imprimir os números em ordem crescente até chegar ao número que o usuário informou
+            function dscfor(x){
+                for (i=0; i <=x; i++){
+                    document.write(i);
+                    document.write('<br>')
+                }
+            }
+            
+            dscfor(5);
+
+            //A mesma função com While
+            function dscwhile(y){
+                var x = 0;
+                while (x <= y){
+                    document.write(x);
+                    document.write('<br>');
+                    x++;
+                }
+            }
+
+            dscwhile(10);
+        </script>
+    </body>
+</html>
