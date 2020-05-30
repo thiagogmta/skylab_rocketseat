@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Exercício 4 - Experiência</h2>
+
+        <script>
+            
+            /*
+                Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+                function experiencia(anos) {
+                // código aqui
+                }
+                var anosEstudo = 7;
+                experiencia(anosEstudo);
+                // De 0-1 ano: Iniciante
+                // De 1-3 anos: Intermediário
+                // De 3-6 anos: Avançado
+                // De 7 acima: Jedi Master
+            */
+            
+            function experiencia (anos){
+                if((anos >=0) && (anos <=1)){
+                    document.write("Iniciante");
+                } else if((anos >=1) && (anos <=3)){
+                    document.write("Intermediário");
+                } else if((anos >=3) && (anos <=6)){
+                    document.write("Avançado");
+                } else if(anos >= 7){
+                    document.write("Jedi");
+                }
+            }
+
+            var anos = 7;
+            experiencia(anos);
+            
+        </script>
+    </body>
+</html>

@@ -23,11 +23,21 @@
             Dica: para verificar se um vetor contém um valor, utilize o método indexOf.
             */
 
-            var nome = ["Thiago", "Guimarães", "Tavares"];
+            var skills = ["Thiago", "Guimarães", "Tavares", "Javascript"];
 
-            while(nome){
-                document.write(nome);
+            var qtarray = skills.length;
+
+            function verificaSkills (skills){
+                
+                if(!(skills.indexOf('Javascript') == -1)){
+                    return true;
+                }else{
+                    return false;
+                }
             }
+
+            var retorno = verificaSkills(skills);
+            document.write(retorno);
             
         </script>
     </body>
