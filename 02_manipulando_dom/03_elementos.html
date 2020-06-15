@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Manipulando Elementos na DOM</h2>
+
+        <form>
+            <input type="text" name="nome" id="nome">
+            <input type="button" id="id_btn" class="cl_btn" value="Diga Oi" >
+        </form>
+
+        <div id="resultado"></div>
+
+        <script>
+
+            var inputName = document.querySelector("input#nome");
+            var btnAction = document.querySelector("input#id_btn");
+            var resultado = document.querySelector("div#resultado");            
+
+            btnAction.onclick = function(){
+                var textNode = document.createTextNode(inputName.value);
+                resultado.appendChild(textNode);
+            }
+            console.log(resultado);
+            console.log(inputName);
+        </script>
+    </body>
+</html>

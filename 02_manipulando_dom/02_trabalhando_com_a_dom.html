@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Trabalhando com a DOM</h2>
+
+        <form>
+            <input type="text" name="nome" id="nome">
+            <input type="button" id="id_btn" class="cl_btn" value="Diga Oi" >
+        </form>
+        <script>
+
+            var inputName = document.querySelector("input#nome");
+            var btnAction = document.querySelector("input#id_btn");
+
+            btnAction.onclick = function(){
+                alert(inputName.value);
+            }
+        </script>
+
+        <div id="resultado"></div>
+    </body>
+</html>

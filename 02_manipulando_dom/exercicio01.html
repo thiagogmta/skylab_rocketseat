@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Botão para manipulação do CSS</h2>
+
+        <button id="rbox">Blue Box</button>
+
+        <script>
+        /*
+            1º exercício
+            Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+            vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+            aparecer na tela
+        */
+
+       var btn = document.querySelector("#rbox");
+       
+       btn.onclick = function(){
+            var elemento = document.createElement("div");
+            elemento.setAttribute('class', 'box');
+            elemento.setAttribute('style','height: 100px; width: 100px; background-color:blue;');
+            
+            document.querySelector("body").appendChild(elemento);
+            
+            console.log(elemento);
+       }
+
+       
+        </script>
+    </body>
+</html>
