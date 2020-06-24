@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+        <style>
+            #boxhover{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Adicionando um item em uma lista via Input</h2>
+
+        <h3>Adicione um novo elemento na Lista</h3>
+        <input type="text" name="nome" id="nome">
+        
+        <button id="adicionar">Adicionar</button>
+
+        <script>
+        /*
+            Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+            
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+
+            Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de nomes 
+            baseado no nome preenchido no input e renderizando o novo item em tela juntos aos demais itens anteriores.
+            
+            Além disso, o conteúdo do input deve ser apagado após o clique.
+        */
+        
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        
+        var ul = document.createElement("ul");              
+        ul.setAttribute('id','ul');
+        document.querySelector("body").appendChild(ul);
+        
+        var btnAdd = document.querySelector("#adicionar");
+        console.log(btnAdd);
+
+        btnAdd.onclick = function (){
+            var li = document.createElement("li");
+            var texto = document.createTextNode(document.querySelector("#nome").value);
+            li.appendChild(texto);
+            document.querySelector("#ul").appendChild(li);
+            document.querySelector("#nome").value = "";
+        }
+
+        for (x of nomes){  
+           
+        }
+
+        </script>
+    </body>
+</html>

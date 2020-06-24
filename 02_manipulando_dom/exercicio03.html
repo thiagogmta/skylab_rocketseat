@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>RocketSeat - JavaScript</title>
+        <meta charset="utf-8">
+        <style>
+            #boxhover{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Curso RocketSeat - JavaScript</h1>
+        <h2>Percorrendo um vetor</h2>
+
+        <div id="myDIV"></div>
+
+        <script>
+        /*
+            A partir do seguinte vetor:
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+            ● Diego
+            ● Gabriel
+            ● Lucas
+        */
+        
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        
+        var ul = document.createElement("ul");
+        
+        
+        ul.setAttribute('id','ul');
+        
+        document.querySelector("body").appendChild(ul);
+        
+        console.log(ul);
+
+        for (x of nomes){  
+            var li = document.createElement("li");
+            var texto = document.createTextNode(x);
+            li.appendChild(texto);
+            console.log(li);
+            document.querySelector("ul").appendChild(li);
+        }
+
+        </script>
+    </body>
+</html>
