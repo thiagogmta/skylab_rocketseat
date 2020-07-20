@@ -1,0 +1,66 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">      
+        <title>Exercício 02</title>
+    </head>
+    <body>
+        <h1>Exercício 02: Promise para perfil do GitHub</h1>
+        <h2>Essa aplicação busca dados de um usuário do gitHub ao inserir seu nickname</h2>
+        
+        <div id="user">
+            <p>Entre com o nome do usuário do gitHub a ser buscado</p>
+            <input type="text" id="nome" placeholder="Nome do usuário">
+            <button>Buscar</button>
+            <p>
+                <div id="msg"></div>
+            </p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            /*
+                Crie uma tela com um <input> que deve receber o nome de um usuário no Github. 
+                
+                Após digitar o nome do usuário e clicar no botão buscar a aplicação deve buscar pela API do Github (conforme
+                URL abaixo) os dados de repositórios do usuário e mostrá-los em tela:
+                URL de exemplo: https://api.github.com/users/diego3g/repos
+                Basta alterar "diego3g" pelo nome do usuário.
+                <input type="text" name="user">
+                <button onclick="">Adicionar</button>
+
+                Depois de preencher o input e adicionar, a seguinte lista deve aparecer abaixo:
+                <ul>
+                <li>repo1</li>
+                <li>repo2</li>
+                <li>repo3</li>
+                <li>repo4</li>
+                <li>repo5</li>
+                </ul>
+            */
+            
+            var user = document.querySelector('#user');
+            var buscar = document.querySelector('#user button');
+            var msg = document.querySelector('#msg');
+
+            buscar.onclick = function(){
+                var nome = document.querySelector('#nome');
+
+                if (nome.value == ''){
+                    msg.appendChild(document.createTextNode('Digite um nome de usuário!'));
+                } else {
+                    axios.get('https://api.github.com/users/'+nome.value+'/repos')
+                        .then(function(response){
+                            console.log(response);
+                        })
+                        .catch(function(reject){
+                           msg.appendChild(document.createTextNode('Usuário não encontrado!'));
+
+                        })
+                }
+
+            }
+
+            
+
+        </script>
+    </body>
+</html>

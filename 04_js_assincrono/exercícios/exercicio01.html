@@ -1,0 +1,46 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">      
+        <title>Exercício 01</title>
+    </head>
+    <body>
+        <h1>Exercício 01: Promise para Idade</h1>
+        <h2>Exibe se a idade é maior ou menor de 18 anos via console log após 2 segundos</h2>
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            /*
+                Crie uma função que recebe a idade de um usuário e retorna uma Promise que depois de 2
+                segundos retornará se usuário é maior ou não que 18 anos. Se o usuário ter mais que 18 anos de
+                idade o resultado deve cair no .then, caso contrário, no .catch
+
+                function checaIdade(idade) {
+                // Retornar uma promise
+                }
+                checaIdade(20)
+                .then(function() {
+                console.log("Maior que 18");
+                })
+                .catch(function() {
+                console.log("Menor que 18");
+                });
+            */
+            
+            function idade(id){
+                return new Promise(function(resolve, reject){
+                    setTimeout(() => {
+                        if(id <= 18){
+                        resolve();
+                        } else {
+                            reject();
+                        }
+                    }, 2000);
+                });
+            }
+
+            idade(28)
+                .then(function(){console.log("Maior que 18");})
+                .catch(function(){console.log("Menor que 18");})
+        </script>
+    </body>
+</html>
