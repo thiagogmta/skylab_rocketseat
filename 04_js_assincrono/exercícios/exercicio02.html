@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1>Exercício 02: Promise para perfil do GitHub</h1>
-        <h2>Essa aplicação busca dados de um usuário do gitHub ao inserir seu nickname</h2>
+        <h2>Essa aplicação busca os repositórios de um usuário do gitHub ao inserir seu nickname</h2>
         
         <div id="user">
             <p>Entre com o nome do usuário do gitHub a ser buscado</p>
@@ -40,6 +40,8 @@
             var user = document.querySelector('#user');
             var buscar = document.querySelector('#user button');
             var msg = document.querySelector('#msg');
+            var ul = document.createElement('ul');
+            
 
             buscar.onclick = function(){
                 var nome = document.querySelector('#nome');
@@ -49,7 +51,18 @@
                 } else {
                     axios.get('https://api.github.com/users/'+nome.value+'/repos')
                         .then(function(response){
-                            console.log(response);
+                            user.appendChild(ul);
+                            for (x of response.data){
+                                var li = document.createElement('li');
+                                var a = document.createElement('a');
+                                a.setAttribute('href', x.html_url);
+                                a.setAttribute('target', '_blank');
+                                nome = document.createTextNode(x.name);
+                                a.appendChild(nome);
+                                li.appendChild(a);
+                                ul.appendChild(li);
+                            }
+                            console.log(response.data[0].name);
                         })
                         .catch(function(reject){
                            msg.appendChild(document.createTextNode('Usuário não encontrado!'));
